@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body .grid {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+.grid header {
+  grid-area: "header";
+}
+
+.grid main {
+  grid-area: "main";
+}
+
+.grid aside {
+  grid-area: "aside";
+}
+
+.grid footer {
+  grid-area: "footer";
+}
