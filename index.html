@@ -4,28 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Felipe Fabris - Portfólio</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home/main.css" />
   </head>
   <body>
+    <header class="header">
+      <h1>Felipe Fabris</h1>
+      <nav>
+        <span><a href="#about">Sobre</a></span>
+        <span><a href="#projects">Projetos</a></span>
+        <span><a href="#contact">Contato</a></span>
+      </nav>
+    </header>
     <content class="grid">
       <!--isso não é de chatgpt cruz credo odeio aquele demonio, eu vou codar isso na mão pq eu sei que consigo-->
-      <!--uma idéia inicial que me veio é remeter ao painel de controle das versões do windows antes do 8-->
-      <header></header>
-      <main>
-        <section>
-          <!-- Aqui vai ser uma introdução minha, scrollando pra baixo vc vai ver os potenciais projetos-->
-          <h1>Felipe Fabris Leite Victorino</h1>
-          <h2>
-            Estudante de Engenharia de Software no Instituto Federal do Paraná,
-            amador em sistemas operacionais Linux incluso.
-          </h2>
+
+      <main class="main">
+        <section class="about" id="about">
+          <h2>Sobre:</h2>
+          <div>
+            Olá, sou Felipe Fabris Leite Victorino, <br />
+            Estudante do Instituto Federal do Paraná, amador em Java, C,
+            HTML/CSS/Javascript, sistemas operacionais e administração de
+            sistemas com o Linux e SystemD.
+          </div>
         </section>
-        <!--os projetos estão dispostos em ícones e rótulos-->
-        <section></section>
+        <section class="projects" id="projects">
+          <h2>Projetos:</h2>
+          <div class="projects-grid">
+            <div class="card">
+              <div class="card-text">
+                <h3>Simulador de CPU</h3>
+                <div>
+                  Um simulador de uma arquitetura de CPU hipotética, feito em C,
+                  contém 16 instruções e 8 registradores.
+                </div>
+              </div>
+
+              <button type="button">Veja mais</button>
+            </div>
+            <div class="card">
+              <div class="card-text">
+                <h3>Portfólio</h3>
+                <div>
+                  Este exato portfólio que você está lendo. Feito em HTML, CSS e
+                  Javascript
+                </div>
+              </div>
+
+              <button type="button">Veja mais</button>
+            </div>
+            <div class="card">
+              <div class="card-text">
+                <h3>Jogo da memória</h3>
+                <div>
+                  Uma implementação baseada em uma API externa, utilizada para
+                  compreender conceitos básicos de desenvolvimento Web
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onclick="window.location.href = 'pages/jogo.html'"
+              >
+                Veja mais
+              </button>
+            </div>
+            <div class="card">
+              <div class="card-text">
+                <h3>Lorem Ipsum</h3>
+                <div>Dolor sit amet consectetur adipscing elit</div>
+              </div>
+
+              <button type="button">Veja mais</button>
+            </div>
+          </div>
+        </section>
       </main>
-      <!--clicar em um projeto na mais, vai mandar o javascript pegar um json associado e colocar uma explicação extensa desse projeto aqui no aside-->
-      <aside></aside>
-      <footer></footer>
+
+      <footer class="footer"></footer>
     </content>
   </body>
 </html>
