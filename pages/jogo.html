@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memória</title>
+    <link rel="stylesheet" href="../css/jogo/jogo.css" />
+    <link rel="stylesheet" href="../css/jogo/modal.css" />
+  </head>
+  <body data-theme="light">
+    <header>
+      <span
+        >Tentativas:
+        <div id="counter">0</div>
+      </span>
+
+      <button type="button" id="reset">Reiniciar</button>
+      <button type="button" id="theme">Alterar Tema</button>
+      <button type="button" id="giveUp">Desistir</button>
+    </header>
+
+    <main>
+      <section class="board" id="board">
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+        <button class="card" id="card">?</button>
+      </section>
+    </main>
+
+    <div class="fade"></div>
+    <div id="modal" class="modal">
+      <div class="content">
+        <h1>Parabéns</h1>
+        <div>Todas as cartas foram abertas:</div>
+
+        <div>Tempo:</div>
+
+        <div>Tentativas:</div>
+
+        <div>Insira seu nome: <input type="text" id="winner" /></div>
+
+        <button>Reiniciar</button>
+        <button>Salvar</button>
+      </div>
+    </div>
+
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
