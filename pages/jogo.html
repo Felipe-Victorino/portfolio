@@ -8,16 +8,18 @@
     <link rel="stylesheet" href="../css/jogo/modal.css" />
   </head>
   <body data-theme="light">
-    <header>
-      <span
-        >Tentativas:
-        <div id="counter">0</div>
-      </span>
+    <div class="header-flex">
+      <header>
+        <span
+          >Tentativas:
+          <div id="counter">0</div>
+        </span>
 
-      <button type="button" id="reset">Reiniciar</button>
-      <button type="button" id="theme">Alterar Tema</button>
-      <button type="button" id="giveUp">Desistir</button>
-    </header>
+        <button type="button" id="reset">Reiniciar</button>
+        <button type="button" id="theme">Alterar Tema</button>
+        <button type="button" id="giveUp">Desistir</button>
+      </header>
+    </div>
 
     <main>
       <section class="board" id="board">
@@ -40,20 +42,27 @@
       </section>
     </main>
 
-    <div class="fade"></div>
     <div id="modal" class="modal">
       <div class="content">
-        <h1>Parabéns</h1>
-        <div>Todas as cartas foram abertas:</div>
+        <div>
+          <h1>Parabéns!</h1>
+          <p>Todas as cartas foram abertas:</p>
+        </div>
+        <div class="result-row">
+          <div>Tentativas:</div>
+          <div id="attempt-results"></div>
 
-        <div>Tempo:</div>
+          <div>Tempo:</div>
+          <div id="time-results"></div>
+        </div>
 
-        <div>Tentativas:</div>
+        <div class="text-row">
+          <div>Insira seu nome: <input type="text" id="winner" /></div>
+        </div>
 
-        <div>Insira seu nome: <input type="text" id="winner" /></div>
-
-        <button>Reiniciar</button>
-        <button>Salvar</button>
+        <div class="button-row">
+          <button>Reiniciar</button> <button>Salvar</button>
+        </div>
       </div>
     </div>
 
