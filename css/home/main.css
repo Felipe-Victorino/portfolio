@@ -1,28 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Plaster&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 :root {
-  --base-white: #eeeeee;
-  --base-gray: #777;
-  --dark-grey: #333;
-  --base-black: #111111;
-  --base-red: rgb(193, 33, 33);
+  --base-white: #eee;
+  --base-black: #111;
 
-  --header-bg-color: var(--dark-grey);
-  --header-txt-color: var(--base-white);
+  --primary: #d52441;
+  --alt-primary: #a04053;
+  --on-surface: #252832;
+  --surface: #e9f1f7;
+  --alt-surface: #a5c3da;
+  --contrast: #4236ab;
 
-  --main-bg-color: var(--base-black);
-  --main-txt-color: var(--base-white);
+  --h1-font-size: 32pt;
+  --h2-font-size: 32pt;
+  --p-font-size: 14pt;
 
-  --card-bg-color: var(--base-gray);
-  --card-txt-color: var(--base-white);
+  --header-bg-color: var(--alt-surface);
+  --header-txt-color: var(--on-surface);
 
-  --footer-bg-color: var(--base-black);
-  --footer-txt-color: var(--base-white);
+  --main-bg-color: var(--surface);
+  --main-txt-color: var(--on-surface);
 
-  --button-bg-color: var(--base-red);
-  --button-text-color: var(--base-white);
+  --card-bg-color: var(--alt-surface);
+  --card-txt-color: var(--on-surface);
+
+  --footer-bg-color: var(--alt-surface);
+  --footer-txt-color: var(--on-surface);
+
+  --button-bg-color: var(--primary);
+  --button-text-color: var(--surface);
 }
 
 html[data-theme="light"] {
@@ -40,30 +50,30 @@ html[data-theme="light"] {
 }
 
 html {
-  scroll-padding-top: 5em;
+  scroll-padding-top: 6em;
   scroll-behavior: smooth;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
-  height: 200dvh;
+  min-height: 100dvh;
   width: 100dvw;
   padding: 0;
   margin: 0;
 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Libre Baskerville", serif;
 }
 
 header {
   background-color: var(--header-bg-color);
   color: var(--header-txt-color);
 
-  height: 5em;
+  height: 4em;
 
   position: sticky;
   top: 0;
   padding: 0 10%;
-
-  box-shadow: 0em 0.25em 0.5em var(--base-black);
 
   display: flex;
   flex-direction: row;
@@ -71,33 +81,71 @@ header {
   justify-content: space-between;
 }
 
+.title {
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 5%;
+  height: 100%;
+  width: 30%;
 }
 
-nav a {
-  color: var(--header-txt-color);
+.nav-button {
+  padding: 1% 10%;
+  height: 100%;
+  width: 50%;
+
+  color: var(--on-surface);
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: transparent;
+  transition: 0.3s;
+}
+
+.nav-button:hover {
+  background-color: var(--surface);
+  color: var(--primary);
+  border-bottom: solid;
+}
+
+.nav-button:active {
+  background-color: var(--alt-surface);
+}
+
+.nav-text {
   text-decoration: none;
+  font-family: "Encode Sans", sans-serif;
   font-size: 16pt;
   font-weight: 600;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: var(--base-red);
+h1 {
+  font-size: var(--h1-font-size);
+  font-weight: 400;
+  font-family: "Plaster", sans-serif;
+  transition: 0.3s;
 }
 
-h1 {
-  font-size: 32pt;
-  font-weight: 900;
+h1:hover {
+  color: var(--primary);
 }
 
 h2 {
   margin-bottom: 5%;
-  font-size: 32pt;
-  font-weight: 700;
+  font-family: "Encode Sans", sans-serif;
+
+  font-size: var(--h2-font-size);
+  font-weight: 900;
+
   border-bottom: solid;
   border-color: var(--main-txt-color);
 }
@@ -109,7 +157,7 @@ main {
 }
 
 section {
-  height: 85vh;
+  height: 60vh;
 
   border-bottom: solid;
   border-color: var(--base-red);
@@ -118,16 +166,44 @@ section {
 button {
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
+  box-shadow: 0em 0.125em var(--on-surface);
+  outline: none;
+
   border: none;
   padding: 5%;
   font-size: 12pt;
-  border-radius: 15%;
+  border-radius: 1em;
+  transition: all 0.3s;
 }
 
 button:hover {
-  color: var;
-  opacity: 50%;
   cursor: pointer;
+  background-color: var(--alt-primary);
+}
+
+button:active {
+  box-shadow: inset 0em 0.25em var(--on-surface);
+}
+
+.hero {
+  height: 95dvh;
+  border: none;
+  background-color: var(--on-surface);
+  color: var(--surface);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+.hero img {
+  width: 30%;
+  height: fit-content;
+}
+
+.hero h1 {
+  font-size: 42pt;
 }
 
 .content {
@@ -139,10 +215,10 @@ button:hover {
 .card {
   background-color: var(--card-bg-color);
   color: var(--card-txt-color);
-  border-radius: 5%;
-  padding: 10%;
+  border-radius: 1em;
+  padding: 2em;
 
-  box-shadow: 0em 0.25em 0.5em var(--base-black);
+  box-shadow: 0em 0.5em;
 
   display: flex;
   flex-direction: column;
@@ -157,7 +233,7 @@ button:hover {
 .grid {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 10%;
+  /* grid-template-rows: 50% 1fr 10%; */
 }
 
 .projects-grid {
