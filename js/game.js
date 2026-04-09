@@ -16,7 +16,13 @@ var time = setInterval(incSeconds, 100);
 
 function finish() {
   let finalTime = seconds;
+  let timeDisplay = document.querySelector("#time-results");
   let finalAttempts = attempts;
+  let attemptDisplay = document.querySelector("#attempt-results");
+
+  timeDisplay.textContent = finalTime.toString();
+  attemptDisplay.textContent = finalAttempts.toString();
+
   winner = document.querySelector("#winner").value;
 }
 
