@@ -1,4 +1,4 @@
-@import url(style.css);
+@import url(jogo.css);
 
 .modal {
   display: none;
@@ -22,11 +22,19 @@
   background-color: white;
   width: 70%;
 
-  border-radius: 5%;
+  border-radius: 2em;
   padding: 10%;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 2em;
+}
+
+.button-row,
+.text-row,
+.result-row {
+  display: flex;
+  flex-direction: row;
 }

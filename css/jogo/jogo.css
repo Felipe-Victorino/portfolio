@@ -5,6 +5,9 @@
 :root {
   --text-color: #111;
   --back-color: #eee;
+  --button-color: #e2e2e2;
+
+  --button-hover-color: #ccc;
   --card-color: rgba(255, 255, 255, 0.3);
   --card-hover-color: rgba(158, 148, 163, 0.5);
   --bg: linear-gradient(135deg, rgb(110, 69, 110), rgb(57, 57, 183));
@@ -19,10 +22,16 @@ html[data-theme="dark"] {
 }
 
 button {
-  background-color: var(--back-color);
+  background-color: var(--button-color);
   color: var(--text-color);
-  border-radius: 5%;
+  border-radius: 8px;
+  border: solid lightgrey;
   padding: 2%;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
 }
 
 body {
@@ -32,8 +41,14 @@ body {
   min-height: 100dvh;
   margin: 0;
 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
+}
+
+.header-flex {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -47,7 +62,7 @@ header {
   gap: 5%;
 
   border: 1px solid gray;
-  border-radius: 10px;
+  border-radius: 12px;
   background: var(--back-color);
   padding: 10px;
   margin: 20px;
@@ -64,17 +79,19 @@ span {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
   padding: 2%;
   width: 100%;
+  height: 100%;
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  height: 50%;
+  grid-template-rows: repeat(4, 1fr);
+  height: 75%;
   width: 50%;
   gap: 5%;
 }
@@ -85,8 +102,8 @@ main {
   background-color: var(--card-color);
 
   padding: 5%;
-  height: 150px;
-  width: 120px;
+  height: 100%;
+  width: 100%;
 
   margin: 1px;
 
