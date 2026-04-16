@@ -23,7 +23,7 @@
 
   --on-surface-dark: #e9f1f7;
   --surface-dark: #252832;
-  --alt-surface-dark: #21283c;
+  --alt-surface-dark: #0e1323;
   --contrast: #4236ab;
 
   --header-height: 4rem;
@@ -34,6 +34,8 @@
 
   --header-bg-color: var(--alt-surface);
   --header-txt-color: var(--on-surface);
+
+  --hero-bg-color: var(--on-surface);
 
   --main-bg-color: var(--surface);
   --main-txt-color: var(--on-surface);
@@ -46,11 +48,17 @@
 
   --button-bg-color: var(--primary);
   --button-text-color: var(--surface);
+
+  --nav-button-txt-color: var(--on-surface);
+  --nav-button-bg-color: var(--surface);
 }
 
 html[data-theme="dark"] {
+  --contrast: #6050ea;
   --header-bg-color: var(--alt-surface-dark);
   --header-txt-color: var(--on-surface-dark);
+
+  --hero-bg-color: var(--alt-surface-dark);
 
   --main-bg-color: var(--surface-dark);
   --main-txt-color: var(--on-surface-dark);
@@ -62,7 +70,10 @@ html[data-theme="dark"] {
   --footer-txt-color: var(--on-surface-dark);
 
   --button-bg-color: var(--primary);
-  --button-text-color: var(--surface-dark);
+  --button-text-color: var(--on-surface-dark);
+
+  --nav-button-txt-color: var(--on-surface-dark);
+  --nav-button-bg-color: var(--surface-dark);
 }
 
 html {
@@ -97,6 +108,23 @@ header {
   justify-content: space-between;
 }
 
+.title-flex {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 5%;
+}
+
+.theme-btn {
+  background-color: var(--contrast);
+  color: var(--button-text-color);
+  width: 8rem;
+  padding: 2%;
+}
+
 .title {
   cursor: pointer;
 }
@@ -116,7 +144,7 @@ nav {
   height: 100%;
   width: 50%;
 
-  color: var(--on-surface);
+  color: var(--nav-button-txt-color);
 
   cursor: pointer;
 
@@ -128,7 +156,7 @@ nav {
 }
 
 .nav-button:hover {
-  background-color: var(--surface);
+  background-color: var(--nav-button-bg-color);
   color: var(--primary);
   border-bottom: solid;
 }
@@ -178,7 +206,7 @@ main {
 
 section:not(.hero) {
   height: fit-content;
-  margin: 30% 0;
+  margin-bottom: 30%;
 }
 
 button {
@@ -209,7 +237,7 @@ button:active {
 .hero {
   height: 95dvh;
   border: none;
-  background-color: var(--on-surface);
+  background-color: var(--hero-bg-color);
   color: var(--surface);
 
   display: flex;
@@ -290,13 +318,18 @@ dt {
   font-weight: 900;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   :root {
-    --header-height: 6rem;
+    --header-height: 7rem;
   }
 
   header {
     flex-direction: column;
+    gap: 2%;
+  }
+
+  .title-flex {
+    justify-content: space-between;
   }
 
   nav {
@@ -305,7 +338,7 @@ dt {
   }
 
   h1 {
-    font-size: larger;
+    font-size: x-large;
   }
 
   .projects-grid {
@@ -330,6 +363,17 @@ dt {
 }
 
 @media only screen and (max-width: 600px) {
+  :root {
+    --header-height: 4rem;
+  }
+  nav {
+    display: none;
+  }
+
+  .theme-btn {
+    display: none;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(1, 1fr);
   }
