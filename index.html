@@ -37,14 +37,15 @@
         <section class="about" id="about">
           <h2>SOBRE</h2>
           <p>
-            Olá, sou Felipe Fabris Leite Victorino, <br />
-            Estudante do Instituto Federal do Paraná, amador em Java, C,
-            HTML/CSS/Javascript, sistemas operacionais e administração de
-            sistemas e daemons com o Linux e SystemD.
+            Olá,
+            sou Felipe Fabris Leite Victorino, Paulistano e Estudante do
+            Instituto Federal do Paraná, amador em Java, C, HTML/CSS/Javascript,
+            sistemas operacionais e administração de sistemas e daemons com o
+            Linux e SystemD.
           </p>
           <p>
             Tenho experiência em UX e design thinking, análise de requisitos e
-            gestão de equipes via SCRUM como Scrum Master
+            gestão de equipes via SCRUM como Scrum Master.
           </p>
         </section>
         <section class="projects" id="projects">
@@ -59,7 +60,14 @@
                 </p>
               </div>
 
-              <button type="button">Veja mais</button>
+              <button
+                type="button"
+                onclick="
+                  window.location.href =
+                    'https://github.com/Felipe-Victorino/cpu-simulator'
+                ">
+                Veja mais
+              </button>
             </div>
             <div class="card">
               <div class="card-text">
@@ -70,7 +78,14 @@
                 </p>
               </div>
 
-              <button type="button">Veja mais</button>
+              <button
+                type="button"
+                onclick="
+                  window.location.href =
+                    'https://github.com/Felipe-Victorino/portfolio'
+                ">
+                Veja mais
+              </button>
             </div>
             <div class="card">
               <div class="card-text">
@@ -83,30 +98,69 @@
 
               <button
                 type="button"
-                onclick="window.location.href = 'pages/jogo.html'"
-              >
+                onclick="window.location.href = 'pages/jogo.html'">
                 Veja mais
               </button>
             </div>
             <div class="card">
               <div class="card-text">
-                <h3>Lorem Ipsum</h3>
-                <p>Dolor sit amet consectetur adipscing elit</p>
+                <h3>Tempo de Cache</h3>
+                <p>
+                  Simulador de tempo de cache de CPU, feito em C++ consiste em
+                  múltiplos níveis configurados via variávies
+                </p>
               </div>
 
-              <button type="button">Veja mais</button>
+              <button
+                type="button"
+                onclick="
+                  window.location.href =
+                    'https://github.com/Felipe-Victorino/cache-simulator'
+                ">
+                Veja mais
+              </button>
             </div>
           </div>
         </section>
         <section class="contacts" id="contacts">
           <h2>CONTATOS</h2>
-          <div>Github:</div>
-          <div>Linkedin:</div>
-          <div>Email</div>
+          <p>
+            Para conversar ou ver mais dos meus projetos, veja os links abaixo
+          </p>
+          <div>
+            <ul>
+              <li>
+                Github:
+                <a href="http://github.com/Felipe-Victorino"
+                  >Felipe-Victorino</a
+                >
+              </li>
+              <li>
+                Email:
+                <a href="mailto:felipe.fabris.leite.v@gmail.com"
+                  >felipe.fabris.leite.v@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
 
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <dl>
+          <dt>Site</dt>
+          <dd><a href="#hero">Home</a></dd>
+          <dd><a href="#about">Sobre</a></dd>
+          <dd><a href="#projects">Projetos</a></dd>
+          <dd><a href="#contacts">Contato</a></dd>
+        </dl>
+        <dl>
+          <dt>Info</dt>
+          <dd>Felipe Fabris Leite Victorino</dd>
+          <dd>Brasil</dd>
+          <dd>CC0, 2026</dd>
+        </dl>
+      </footer>
     </content>
   </body>
 </html>
