@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const endBtn = document.querySelector("#giveUp");
   endBtn.onclick = () => switchModal();
 
+  const modResetBtn = document.querySelector("#modRestart");
+  modResetBtn.onclick = () => game.closeAndReset();
+  
+
   api.getWords();
 
   game.start();
