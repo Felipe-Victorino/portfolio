@@ -1,4 +1,5 @@
 import * as api from "./api.js";
+import switchModal from "./modal.js";
 import * as utils from "./utils.js";
 
 const counter = document.querySelector("#counter");
@@ -14,7 +15,7 @@ let completed = false;
 
 var time = setInterval(incSeconds, 100);
 
-function finish() {
+export function finish() {
   let finalTime = seconds;
   let timeDisplay = document.querySelector("#time-results");
   let finalAttempts = attempts;
@@ -41,8 +42,18 @@ function checkCompleteStatus() {
       complete++;
     }
   });
-  if (complete == 16) complete = true;
+  if (complete == 16) completed = true;
   //console.log(complete + " " + completed);
+  if (isComplete()) {
+    switchModal();
+  }
+}
+
+export function closeAndReset(){
+  reset();
+  start();
+  switchModal();
+
 }
 
 function isComplete() {
