@@ -8,9 +8,15 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="title" onclick="window.location.href = '#hero'">
-        Felipe Fabris
-      </h1>
+      <div class="title-flex">
+        <h1 class="title" onclick="window.location.href = '#hero'">
+          Felipe Fabris
+        </h1>
+        <div>
+          <button id="theme" class="theme-btn">Trocar Tema</button>
+        </div>
+      </div>
+
       <nav>
         <div class="nav-button" onclick="window.location.href = '#about'">
           <div class="nav-text">Sobre</div>
@@ -37,8 +43,7 @@
         <section class="about" id="about">
           <h2>SOBRE</h2>
           <p>
-            Olá,
-            sou Felipe Fabris Leite Victorino, Paulistano e Estudante do
+            Olá, sou Felipe Fabris Leite Victorino, Paulistano e Estudante do
             Instituto Federal do Paraná, amador em Java, C, HTML/CSS/Javascript,
             sistemas operacionais e administração de sistemas e daemons com o
             Linux e SystemD.
@@ -104,10 +109,10 @@
             </div>
             <div class="card">
               <div class="card-text">
-                <h3>Tempo de Cache</h3>
+                <h3>Controle Financeiro</h3>
                 <p>
-                  Simulador de tempo de cache de CPU, feito em C++ consiste em
-                  múltiplos níveis configurados via variávies
+                  Web App feito em React com Vite, usa Typescript e Tailwind. Em
+                  progesso!
                 </p>
               </div>
 
@@ -115,7 +120,7 @@
                 type="button"
                 onclick="
                   window.location.href =
-                    'https://github.com/Felipe-Victorino/cache-simulator'
+                    'https://github.com/Felipe-Victorino/controle-financeiro'
                 ">
                 Veja mais
               </button>
@@ -162,5 +167,6 @@
         </dl>
       </footer>
     </content>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
