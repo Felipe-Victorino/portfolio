@@ -1,4 +1,4 @@
-import { URL, NAMES } from "./config.js";
+import { URL, SAVE_URL, RANK_URL, NAMES } from "./config.js";
 
 export async function getWords() {
   try {
@@ -16,7 +16,7 @@ export async function getWords() {
   }
 }
 
-export async function saveRound() {
+export async function saveRound(name, time, tries) {
   try {
     const response = await fetch(`${URL}/api/salvar.php`, {
       method: "POST",
@@ -32,5 +32,22 @@ export async function saveRound() {
     //console.log(data);
   } catch (error) {
     console.log(error);
+  }
+}
+
+export async function getRankings() {
+  try {
+    const response = await fetch(`${URL}/api/ranking.php`);
+
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}`);
+    }
+
+    let ranking = [];
+    ranking = await response.json();
+    return ranking;
+  } catch (error) {
+    console.log(error);
+    return [];
   }
 }
