@@ -163,6 +163,7 @@ nav {
 
 .nav-button:active {
   background-color: var(--alt-surface);
+  border-bottom: none;
 }
 
 .nav-text {
@@ -247,6 +248,13 @@ button:active {
   gap: 5%;
 }
 
+.weather,
+.date {
+  font-size: larger;
+  font-weight: 700;
+  font-family: "Encode Sans", sans-serif;
+}
+
 .hero img {
   width: 30%;
   height: fit-content;
@@ -294,7 +302,7 @@ button:active {
 }
 
 a {
-  color: var(--contrast);
+  color: color-mix(in srgb, var(--contrast) 75%, white 25%);
   text-decoration: none;
   transition: 0.3s;
 }
