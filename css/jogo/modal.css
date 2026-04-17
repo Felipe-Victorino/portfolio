@@ -19,7 +19,8 @@
 }
 
 .modal .content {
-  background-color: white;
+  background-color: var(--back-color);
+  color: var(--text-color);
   width: 70%;
 
   border-radius: 2em;
@@ -37,4 +38,6 @@
 .result-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  gap: 5%;
 }
